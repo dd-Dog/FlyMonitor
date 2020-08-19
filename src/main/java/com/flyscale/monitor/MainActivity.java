@@ -33,13 +33,11 @@ public class MainActivity extends AppCompatActivity {
         new Thread() {
             @Override
             public void run() {
-                String url = "http://192.168.1.104:8080/FlyMonitor/servlet/upload";
+                String url = "http://124.71.115.4/FlyMonitor/servlet/upload";
 //                String filename = "evo.jpg";
-                String filename = "1577697012473_tmp.jpg";
+                String filename = "tonghuazhen.mp3";
                 // external=/storage/emulated/0
-                String path = Environment.getExternalStorageDirectory().getPath()
-                //"/storage/sdcard0"
-                        + "/fengpjtest/" + filename;
+                String path = "/mnt/sdcard/" + filename;
                 try {
                     HttpEngine.upload(url, path, filename);
                 } catch (Exception e) {
